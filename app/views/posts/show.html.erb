@@ -1,0 +1,25 @@
+<div>
+  <p>
+    <h3>Title:
+    <%= @post.title %></h3>
+  </p>
+
+  <p>
+   <small>Created at:
+    <%= @post.created_at %></small>
+
+    <h3>Description</h3>
+    <%= @post.description %>
+  </p>
+  </p>
+  <% if user_signed_in? %>
+    <%= link_to 'Edit', edit_post_path(@post) %>
+    <%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: "Are you sure?" } %>
+    <% end %>
+  <p>
+    <h1><%= @post.comments.count %> Comments</h1>
+    <%= render @post.comments %>
+
+    <strong>Add comments:</strong>
+    <%= render "comments/form" %>
+</div>
