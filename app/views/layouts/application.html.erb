@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Blog</title>
+    <title>Blogger</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -45,7 +45,7 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <% if !user_signed_in? %>
-               <li><%= link_to "Admin Log in", user_session_path %></li>
+               <li><%= link_to "Log in", user_session_path %></li>
                <li><%= link_to "New User", new_user_registration_path %></li>
                <% end %>
                </ul>
