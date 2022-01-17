@@ -17,9 +17,5 @@
     <%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: "Are you sure?" } %>
     <% end %>
   <p>
-    <h1><%= @post.comments.count %> Comments</h1>
-    <%= render @post.comments %>
-
-    <strong>Add comments:</strong>
-    <%= render "comments/form" %>
+   
 </div>
